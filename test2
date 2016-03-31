@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+/*void yrCalc(long epoch, int *year, int *month, int *day)
+{
+	*year  = epoch / 365 + 1900;
+	*month = epoch % 365 / 30 + 1;
+	*day   = epoch % 365 % 30 + 1;
+}
+
+int main()
+{
+	int year, month, day;
+	yrCalc(35662, &year, &month, &day);
+	printf("%d, %d, %d", year, month, day);
+	return 0;
+}
+*/
+
+double pow(double base, int exp)
+{
+	return exp == 1 ? base : base * pow(base, exp - 1);
+}
+
+int main()
+{
+	printf("%.0f", pow(2, 20));
+	return 0;
+}
